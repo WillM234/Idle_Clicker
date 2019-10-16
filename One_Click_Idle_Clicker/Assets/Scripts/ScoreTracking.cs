@@ -4,16 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ScoreTracking : MonoBehaviour
 {
+//score tracking texts//
 public Text payableScore;
 public Text ClicksPerSecond;
-
+//Floats for adding to score//
 public float totalscore;
+public float totalMClicks;
 public float addMClicks;
 public float addIClicks;
 public float manualClicks;
 public float idleClicksPerSec;
 public float timer = 1;
-
+//texts for cost of updrade//
+public Text OnClick1Cost;
+public Text OnClick5Cost;
+public Text OnClick10Cost;
+public Text OnClick100Cost;
+public Text IClick1Cost;
+public Text IClick5Cost;
+public Text IClick10Cost;
+public Text IClick100Cost;
+public Text IClick500Cost;
+public Text IClick1000Cost;
+//floats for cost of upgrade//
+public float OnClick1Cost;
+public float OnClick5Cost;
+public float OnClick10Cost;
+public float OnClick100Cost;
+public float IClick1Cost;
+public float IClick5Cost;
+public float IClick10Cost;
+public float IClick100Cost;
+public float IClick500Cost;
+public float IClick1000Cost;
 
 void Start()
 {
@@ -22,7 +45,8 @@ void Start()
 }
 public void MainButtonClick()
 {
-manualClicks = addMClicks * 1f;
+totalMClicks = manualClicks;
+totalscore += totalMClicks;//adds score per manual click
 }
 public void OnClick1()//adds 1 point per manual click
 {
@@ -66,25 +90,23 @@ addIClicks += 1000f;
 }
 public void ReSet()
 {
-
+addIClicks = 0f;
+addMClicks = 1f;
+totalscore = 0f;
 }
 void Update()
 {
-    timer -= Time.deltaTime;
+manualClicks = addMClicks;
+    timer -= Time.deltaTime;//sets timer to degrodate per sec.
     idleClicksPerSec = addIClicks * 1f;
-
-    totalscore = manualClicks;// + (idleClicksPerSec++);
    
 if(timer <= 0)
 {
- totalscore += idleClicksPerSec;
+ totalscore += idleClicksPerSec;//adds idle increase per sec.
  timer = 1;
 }
 
 payableScore.text = ("Score: " + totalscore);
-}
-void FixedUpdate()
-{
-
+ClicksPerSecond.text = ("Clicks Per Second: " + idleClicksPerSec);
 }
 }
