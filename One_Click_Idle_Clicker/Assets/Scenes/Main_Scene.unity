@@ -953,6 +953,36 @@ MonoBehaviour:
   manualClicks: 0
   idleClicksPerSec: 0
   timer: 1
+  OnClick1Cost: {fileID: 1012717469}
+  OnClick5Cost: {fileID: 381337213}
+  OnClick10Cost: {fileID: 1499115112}
+  OnClick100Cost: {fileID: 1614741554}
+  IClick1Cost: {fileID: 1108882300}
+  IClick5Cost: {fileID: 919227380}
+  IClick10Cost: {fileID: 1787718622}
+  IClick100Cost: {fileID: 1542155461}
+  IClick500Cost: {fileID: 635042625}
+  IClick1000Cost: {fileID: 1779559815}
+  onClick1Cost: 0
+  onClick5Cost: 0
+  onClick10Cost: 0
+  onClick100Cost: 0
+  iClick1Cost: 0
+  iClick5Cost: 0
+  iClick10Cost: 0
+  iClick100Cost: 0
+  iClick500Cost: 0
+  iClick1000Cost: 0
+  oC1Level: 0
+  oC5Level: 0
+  oC10Level: 0
+  oC100Level: 0
+  iC1Level: 0
+  iC5Level: 0
+  iC10Level: 0
+  iC100Level: 0
+  iC500Level: 0
+  iC1000Level: 0
 --- !u!4 &502280106
 Transform:
   m_ObjectHideFlags: 0
