@@ -121,7 +121,7 @@ if(totalscore >= iClick1Cost)
     {
     addIClicks += 1f;
     totalscore -= iClick1Cost;
-
+    iC1Level += 1f;
     }
 }
 public void IClick5()//adds 5 Click per sec on idle clicker
@@ -196,11 +196,11 @@ onClick1Cost = (oC1Level * 5f)*5f;
 
 if(oC5Level > 0f)
     {
-    onClick5Cost = (oC5Level* 5f)*5f;
+    onClick5Cost = (oC5Level* 25f)*5f;
     }
 if(oC10Level > 0f)
     {
-    onClick10Cost = (oC10Level * 10f)*10f;
+    onClick10Cost = (oC10Level * 50f)*10f;
     }
 if(oC100Level > 0f)
     {
