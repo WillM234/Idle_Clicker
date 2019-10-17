@@ -7,6 +7,7 @@ public class ScoreTracking : MonoBehaviour
 //score tracking texts//
 public Text payableScore;
 public Text ClicksPerSecond;
+public Text MClickPerClick;
 //Floats for adding to score//
 public float totalscore;
 public float totalMClicks;
@@ -202,6 +203,7 @@ if(timer <= 0)
 
 payableScore.text = ("Score: " + totalscore);//updates score 
 ClicksPerSecond.text = ("Clicks Per Second: " + idleClicksPerSec);//updates C/s
+MClickPerClick.text = ("Points Per Manual Click: " + totalMClicks);
 //sets float for upgrade cost if levels are above 0.//
 onClick1Cost = (oC1Level * 5f)*5f;
 
