@@ -175,7 +175,18 @@ public void ReSet()//resets whole game including costs and upgrade levels would 
 {
 addIClicks = 0f;
 addMClicks = 1f;
+    oC1Level = 1f;
+    oC5Level = 0f;
+    oC10Level = 0f;
+    oC100Level = 0f;
+    iC1Level = 0f;
+    iC5Level = 0f;
+    iC10Level = 0f;
+    iC100Level = 0f;
+    iC500Level = 0f;
+    iC1000Level = 0f;
 totalscore = 0f;
+
 }
 void Update()
 {
